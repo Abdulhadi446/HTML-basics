@@ -94,6 +94,6 @@ Note: briefly lists the main files present in each lesson folder.
 - Add screenshots or small tests to show the expected result for each lesson.
 - Consider adding a top-level `index.html` that links to all lesson entry pages for easier navigation.
 
-## License
+## Notes
 
-Content appears to be personal learning exercises. If you want to share, add a license file (for example, `LICENSE` with an MIT or CC license).
+This repository contains personal learning exercises for practicing HTML and CSS.
