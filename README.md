@@ -78,8 +78,6 @@ Note: briefly lists the main files present in each lesson folder.
 
 - Because the `Lesson 10/` folder is ignored by git, your local work won't be committed unless you remove it from `.gitignore` or explicitly add files with `git add -f`.
 
-- If you want, I can scaffold a starter `Lesson 10/` project for you (index + styles + sample images) and show how to commit it safely or keep it private.
-
 ## How to view the lessons
 
 - Open a lesson's `index.html` file in any modern browser (double-click or use the browser "Open File" feature).
@@ -99,7 +97,3 @@ Note: briefly lists the main files present in each lesson folder.
 ## License
 
 Content appears to be personal learning exercises. If you want to share, add a license file (for example, `LICENSE` with an MIT or CC license).
-
----
-
-If you'd like, I can also generate a top-level `index.html` that links to each lesson and/or add per-lesson README files with a short description — tell me which you prefer.
