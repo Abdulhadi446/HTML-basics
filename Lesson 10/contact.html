@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="NM studio's" />
+    <meta
+      name="description"
+      content="NM studio's contact info to contact NM studio for bookings."
+    />
+    <title>NM studio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Contact & Booking — NM studio's</h1>
+
+      <p>
+        Questions, booking requests, or urgent support — get in touch and we'll
+        reply quickly.
+      </p>
+
+      <nav>
+        <ul>
+          <li><a href="/">Home Page</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="hours.html">Timing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </nav>
+
+      <figure>
+        <img
+          src="img/cropped_circle_image.png"
+          alt="Contact Us"
+          height="300"
+          title="Contact Us"
+        />
+        <figcaption>Contact Us</figcaption>
+      </figure>
+    </header>
+
+    <hr />
+
+    <section>
+      <h2>Contact details</h2>
+      <p>Phone / Text: <strong>+1 (555) 123-4567</strong></p>
+      <p>Email: <a href="mailto:hello@nmstudio.com">hello@nmstudio.com</a></p>
+      <p>Studio (by appointment): 123 Studio Lane, Your City</p>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Booking / Contact form</h2>
+      <p>
+        Fill out the form below and we'll confirm availability within 24 hours
+        (usually much faster).
+      </p>
+
+      <form
+        id="contactForm"
+        action="https://formspree.io/f/xwpneqez"
+        method="POST"
+      >
+        <label for="name">Full name *</label><br />
+        <input type="text" id="name" name="name" required /><br />
+
+        <label for="email">Email *</label><br />
+        <input type="email" id="email" name="email" required /><br />
+
+        <label for="phone">Phone</label><br />
+        <input type="tel" id="phone" name="phone" /><br />
+
+        <label for="service">Service requested</label><br />
+        <select id="service" name="service">
+          <option>Portrait session</option>
+          <option>Event / Wedding</option>
+          <option>Product shoot</option>
+          <option>Video</option>
+          <option>Other</option></select
+        ><br />
+
+        <label for="date">Preferred date</label><br />
+        <input type="date" id="date" name="date" /><br />
+
+        <label for="message">Message / details</label><br />
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Share locations, number of guests, or any other details..."
+        ></textarea
+        ><br />
+
+        <button type="submit" id="sendBtn">Send request</button>
+      </form>
+      <div id="formStatus" aria-live="polite" style="margin-top: 12px"></div>
+
+      <p>
+        <small
+          >Alternatively, email us directly at
+          <a href="mailto:hello@nmstudio.com">hello@nmstudio.com</a>.</small
+        >
+      </p>
+    </section>
+
+    <script>
+      // Formspree-only submission via fetch. No mailto fallback.
+      (function () {
+        var form = document.getElementById("contactForm");
+        var status = document.getElementById("formStatus");
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          status.textContent = "Sending...";
+
+          var data = {
+            name: form.name.value.trim(),
+            email: form.email.value.trim(),
+            phone: form.phone.value.trim(),
+            service: form.service.value,
+            date: form.date.value,
+            message: form.message.value.trim(),
+            _subject:
+              "Booking request from " +
+              form.name.value.trim() +
+              " — " +
+              form.service.value,
+          };
+
+          if (!data.name || !data.email) {
+            status.textContent = "";
+            alert("Please provide your name and email.");
+            return;
+          }
+
+          fetch(form.action, {
+            method: "POST",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+          })
+            .then(function (response) {
+              if (response.ok) {
+                status.textContent =
+                  "Thanks — your request has been sent. We will contact you shortly.";
+                form.reset();
+              } else {
+                status.textContent =
+                  "Submission failed. Please try again later or contact hello@nmstudio.com.";
+              }
+            })
+            .catch(function () {
+              status.textContent =
+                "Network error. Please try again later or contact hello@nmstudio.com.";
+            });
+        });
+      })();
+    </script>
+
+    <hr />
+
+    <footer>
+      <p>&copy; 1950 NM studio's. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

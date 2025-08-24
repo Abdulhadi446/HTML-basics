@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Abdul Hadi">
+    <meta name="description" content="A simple 'HELLO WORLD' page">
+    <title>My first web page</title>
+    <link
+      rel="icon"
+      href="https://sodeom.com/favicon.ico"
+      type="image/x-icon"
+  >
+    <link rel="stylesheet" href="styles.css" type="text/css">
+  </head>
+  <body>
+    <header>
+      <h1>Hello, World</h1>
+
+      <nav aria-label="main-navigation">
+        <ul>
+          <li>
+            <a href="#learning-html">Back to Learning HTML</a>
+          </li>
+
+          <li>
+            <a href="#vacation-planning">Back to Vacation Planning</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <hr>
+    <main>
+      <article id="learning-html">
+        <h2>I am ready to learn HTML</h2>
+        <p>This is my first page</p>
+
+        <section>
+          <h3>HTML5</h3>
+          <img
+            src="img/html_logo_300_300.png"
+            alt="HTML5 Logo"
+            title="I am learning HTML5."
+            width="300"
+        >
+
+          <figure>
+            <figcaption>An example HTML5 code.</figcaption>
+            <p>
+              <code>&lt;h1&gt;Hello, World&lt;/h1&gt;</code>
+            </p>
+          </figure>
+        </section>
+
+        <section>
+          <h3>My daily schedule</h3>
+          <p>I am going to learn 1 HTML a day:</p>
+          <ol>
+            <li>I am <abbr title="happy">happy</abbr>.</li>
+            <li>
+              Sorry! I am
+              <abbr title="happy"> <a href="http://happy.com/">happy</a> </abbr
+              >. FR.
+            </li>
+            <li>I am learning on Youtube......</li>
+          </ol>
+          <aside>
+            <details>
+              <summary>
+                Guess the <mark>number of hours</mark> I code per day
+              </summary>
+              <p>
+                I start at <time datetime="08:00">8 am</time> and code for about
+                <time datetime="PT3H"></time> 3 hours a day.
+              </p>
+            </details>
+          </aside>
+        </section>
+        <table>
+          <caption>My Daily Schedule</caption>
+          <thead>
+            <tr>
+              <th>&nbsp;</th>
+              <th scope="col">Time</th>
+              <th scope="col">Activity</th>
+            </tr>
+          </thead>
+
+          <tbody>
+          <tr>
+            <th scope="row">Morning</th>
+            <td>
+              <time datetime="08:00">8am</time> -
+              <time datetime="11:00">11am</time>
+              <td>Writing Code.</td>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">Break</th>
+            <td>
+              <time datetime="11:00">11am</time> -
+              <time datetime="12:00">12pm</time>
+              <td>Eat lunch.</td>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">After Noon</th>
+            <td>
+              <time datetime="12:00">12pm</time> -
+              <time datetime="15:00">5pm</time>
+              <td>Study for other things.</td>
+            </td>
+          </tr>
+          <tr>
+            <th  scope="row">Evening</th>
+            <td rowspan="2">All other time</td>
+            <td>Free Time</td>
+          </tr>
+          <tr>
+            <th scope="row">Night</th>
+            <td>Sleep</td>
+          </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">Thats what I do every working day. jsut code, lunch, and sleep.</td>
+            </tr>
+          </tfoot>
+        </table>
+      </article>
+
+      <hr>
+
+      <article id="vacation-planning">
+        <h2>I am planning a HTML vocation.</h2>
+        <p>Becuase i am tired of leaning <em> thiissssss</em>.</p>
+        <p>Broo I love vocations.</p>
+
+        <section>
+          <h3>Days I like to off</h3>
+
+          <ul>
+            <li>
+              First Sundays. Every one has Weekends.
+              <br>
+
+              <figure>
+                <img
+                  src="img/vocation.jpg"
+                  alt="Vocation"
+                  height="200"
+                  title="I am planning a vacation."
+                  loading="lazy"
+              >
+                <figcaption>Beach for my vocations</figcaption>
+              </figure>
+            </li>
+            <li>
+              <p>I will go to:</p>
+              <address>My favorite vacation spot is the beach.</address>
+
+              <figure>
+                <img
+                  src="img/caribbean.jpg"
+                  alt="Vocation"
+                  height="200"
+                  title="I am planning to just visit it."
+                  loading="lazy"
+              >
+                <figcaption>Cari bean beach</figcaption>
+              </figure>
+            </li>
+          </ul>
+        </section>
+        <!-- This adderess Is fake......... -->
+
+        <section>
+          <h3>Days I Don't to off</h3>
+          <dl>
+            <dt>Days</dt>
+            <dd>Any day</dd>
+          </dl>
+        </section>
+      </article>
+    </main>
+
+    <hr>
+
+    <footer>
+      <p>
+        &lt;&lt;&lt; &copy; <a href="about.html">Abdul Hadi</a> &gt;&gt;&gt;
+      </p>
+
+      <p>
+        <a href="#">Back to Top</a>
+      </p>
+
+      <p>Thank you for visiting my page!</p>
+      <a href="#learning-html">Back to Learning HTML</a>
+      <a href="#vacation-planning">Back to Vacation Planning</a>
+    </footer>
+  </body>
+</html>
